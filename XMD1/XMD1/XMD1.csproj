@@ -37,6 +37,18 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="CommonCLR\IWebClient_clr.cs" />
+    <Compile Include="Localization\ILocalize.cs" />
+    <Compile Include="Localization\TextResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\TextResources.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextResources.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\TranslateExtension.cs" />
     <Compile Include="MDPage.cs" />
     <Compile Include="Page\DxpDataGrid.xaml.cs">
       <DependentUpon>DxpDataGrid.xaml</DependentUpon>
@@ -46,6 +58,9 @@
     </Compile>
     <Compile Include="Page\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Multilingualism.xaml.cs">
+      <DependentUpon>Multilingualism.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\WebClientPage.xaml.cs">
       <DependentUpon>WebClientPage.xaml</DependentUpon>
@@ -81,6 +96,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Localization\TextResources.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextResources.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\TextResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Page\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\WebClientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\Multilingualism.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

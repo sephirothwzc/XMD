@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XMD1.Page.Multilingualism"
+             xmlns:i18n="clr-namespace:Localization">
+
+  <StackLayout >
+    <!--<BoxView    AbsoluteLayout.LayoutBounds="0.25, 0.25, 0.5, 0.5"
+                Color="Blue"
+                AbsoluteLayout.LayoutFlags="All" />-->
+    <Label Text="{i18n:Translate About_Context}" VerticalOptions="Center" HorizontalOptions="Center" x:Name="lab"/>
+    <Button Text="中文" Clicked="zhclicked" HorizontalOptions="Start" />
+    <Button Text="英文" x:Name="enbtn"  HorizontalOptions="End"/>
+  </StackLayout>
+</ContentPage>

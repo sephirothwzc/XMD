@@ -64,6 +64,10 @@ namespace XMD1
                         tpage = new NavigationPage(new WebClientPage());
                         Pages.Add(displayName, tpage);
                         break;
+                    case "Multilingualism":
+                        tpage = new NavigationPage(new Multilingualism());
+                        Pages.Add(displayName, tpage);
+                        break;
                 }
             }
             newPage = Pages[displayName];
