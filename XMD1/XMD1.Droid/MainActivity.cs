@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using CommonCLR;
 
 namespace XMD1.Droid
 {
@@ -14,10 +15,13 @@ namespace XMD1.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            DevExpress.Mobile.Forms.Init();
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            App.webclient = new WebClient_clr();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using CommonCLR;
 
 namespace XMD1.iOS
 {
@@ -22,9 +23,12 @@ namespace XMD1.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            DevExpress.Mobile.Forms.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            App.webclient = new WebClient_clr();
             return base.FinishedLaunching(app, options);
         }
     }
