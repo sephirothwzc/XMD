@@ -50,6 +50,9 @@
     </Compile>
     <Compile Include="Localization\TranslateExtension.cs" />
     <Compile Include="MDPage.cs" />
+    <Compile Include="Page\CXFAGrid.xaml.cs">
+      <DependentUpon>CXFAGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\DxpDataGrid.xaml.cs">
       <DependentUpon>DxpDataGrid.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\Multilingualism.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\CXFAGrid.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
