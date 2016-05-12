@@ -5,6 +5,7 @@ using System.Text;
 using CommonCLR;
 
 using Xamarin.Forms;
+using XMD1.Page;
 
 namespace XMD1
 {
@@ -18,7 +19,8 @@ namespace XMD1
         public App()
         {
             // The root page of your application
-            MainPage = new MDPage();
+            //MainPage = new MDPage();
+            MainPage = new CXFAGrid();
         }
 
         protected override void OnStart()
